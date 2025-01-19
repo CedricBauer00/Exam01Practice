@@ -22,10 +22,13 @@ char    *ft_strdup(char *src)
 	return (str);
 }
 
+
 #include <stdio.h>
+
 int main()
 {
-	char *src = "Hello";
+	char *src = "Hellowordl";
+
 	printf("%s\n", ft_strdup(src));
 	return (0);
 }

@@ -1,0 +1,9 @@
+rstr_cap.c 
+	wieso nimmt er a.out in den input mit rein
+epur_str
+	wieso nimmt er bei Bsp 2 nicht das Space am ende weg?
+		"this time it will be more complex . $"
+
+exapnd_str
+	selbes wie oben, warum nimmt er das zweite Beispiel nicht??
+		"this   time   it   will   be   more   complex   $"

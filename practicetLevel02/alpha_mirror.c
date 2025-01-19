@@ -1,10 +1,14 @@
 // #include <unistd.h>
 
-
-// int main(int argc, char *argv[])
+// int main(int argc, char*argv[])
 // {
-// 	int	i;
+// 	int i;
+// 	int j;
+// 	int k;
+// 	char c;
 
+// 	k = 0;
+// 	j = 0;
 // 	i = 0;
 // 	if (argc == 2)
 // 	{
@@ -12,13 +16,17 @@
 // 		{
 // 			if (argv[1][i] >= 'A' && argv[1][i] <= 'Z')
 // 			{
-// 				argv[1][i] = argv[1][i] + 32;
-// 				write(1, &argv[1][i], 1);
+// 				j = argv[1][i] -64;
+// 				k = 26 - j;
+// 				c = k + 65;
+// 				write(1, &c, 1);
 // 			}
-// 			else if (argv[1][i] >= 'a' && argv[1][i] <= 'z')
+// 			if (argv[1][i] >= 'a' && argv[1][i] <= 'z')
 // 			{
-// 				argv[1][i] = argv[1][i] - 32;
-// 				write(1, &argv[1][i], 1);
+// 				j = argv[1][i] - 96;
+// 				k = 26 - j;
+// 				c = k + 97;
+// 				write(1, &c, 1);
 // 			}
 // 			i++;
 // 		}
@@ -28,25 +36,36 @@
 
 
 
-
 #include <unistd.h>
+
 
 int main(int argc, char *argv[])
 {
 	int i;
+	int j;
+	int k;
 	char c;
 
+	c = 0;
 	i = 0;
+	j = 0;
+	k = 0;
 	if (argc == 2)
 	{
 		while (argv[1][i])
 		{
 			if (argv[1][i] >= 'A' && argv[1][i] <= 'Z')
-				c = argv[1][i] + 32;
+			{
+				j = argv[1][i] - 64;
+				k = 26 - j;
+				c = k + 65;
+			}
 			else if (argv[1][i] >= 'a' && argv[1][i] <= 'z')
-				c = argv[1][i] - 32;
-			else
-				c = argv[1][i];
+			{
+				j = argv[1][i] -96;
+				k = 26 - j;
+				c = k + 97;
+			}
 			write(1, &c, 1);
 			i++;
 		}

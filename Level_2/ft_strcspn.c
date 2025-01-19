@@ -1,36 +1,36 @@
-#include <unistd.h>
-#include <stdio.h>
+// #include <unistd.h>
+// #include <stdio.h>
 
-size_t	ft_strcspn(const char *s, const char *reject)
-{
-	int i;
-	int j;
+// size_t	ft_strcspn(const char *s, const char *reject)
+// {
+// 	int i;
+// 	int j;
 
-	j = 0;
-	i =0;
-	while (s[i] != '\0')
-	{
-		// write(1, &s[i], 1);
-		// write(1, "\npassed\n", 6);
-		// printf("%d\n", i);
-		while (s[i] != reject[j])
-			j++;			
-		if (s[i] == reject[j])
-			return (s[i]);
-		i++;
-	}
-	return (s[i]);
-}
+// 	j = 0;
+// 	i =0;
+// 	while (s[i] != '\0')
+// 	{
+// 		// write(1, &s[i], 1);
+// 		// write(1, "\npassed\n", 6);
+// 		// printf("%d\n", i);
+// 		while (s[i] != reject[j])
+// 			j++;			
+// 		if (s[i] == reject[j])
+// 			return (s[i]);
+// 		i++;
+// 	}
+// 	return (s[i]);
+// }
 
-int main()
-{
-	char *str = "Hello World";
-	char *reject = "World";
-	size_t t;
-	t = ft_strcspn(str, reject);
-	printf("%zu\n", t);
-	return (0);
-}
+// int main()
+// {
+// 	char *str = "Hello World";
+// 	char *reject = "World";
+// 	size_t t;
+// 	t = ft_strcspn(str, reject);
+// 	printf("%zu\n", t);
+// 	return (0);
+// }
 
 // cmd1 | cmd2   
 
@@ -64,3 +64,24 @@ int main()
 // file1 = 3
 
 
+// size_t	ft_strspn(const char *s, const char *accept)
+// {
+
+// }
+
+#include <string.h>
+#include <stdio.h>
+
+int main()
+{
+	char *str = "Hello World";
+	char *accept = "World WWHe";
+	printf("%lu\n", strspn(str, accept));
+	return (0);
+}
+
+
+size_t	ft_strcspn(const char *s, const char *reject)
+{
+	
+}
